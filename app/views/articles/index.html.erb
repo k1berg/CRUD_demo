@@ -1,2 +1,14 @@
-<h1>Articles#index</h1>
+<h1>Articles about astro</h1>
 <p>Find me in app/views/articles/index.html.erb</p>
+
+<div >
+<% @articles.each do |article| %>
+<article>
+  <!-- Ваш код для каждой статьи здесь -->
+  <h2><%= link_to article.title, article_path(article.id) %></h2>
+  <!-- <p><%= article.body %></p> -->
+  <span><%= article.author%></span>
+  <span><%= article.created_at.in_time_zone('Moscow').strftime("%H:%m %d.%m.%Y")%></span>
+</article>
+<% end %>
+</div>
