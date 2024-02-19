@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <% if flash[:success]%>
+      <p class="flash"><%= flash[:success]%></p>
+    <% elsif flash[:failure] %>
+      <p class="error"><%= flash[:failure]%></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>

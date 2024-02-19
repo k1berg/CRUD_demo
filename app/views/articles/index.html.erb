@@ -2,6 +2,8 @@
 <p>Find me in app/views/articles/index.html.erb</p>
 
 <div >
+<%=link_to "New article", new_article_path %>
+
 <% @articles.each do |article| %>
 <article>
   <!-- Ваш код для каждой статьи здесь -->
