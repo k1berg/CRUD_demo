@@ -1,22 +1,4 @@
 <h1>Create article</h1>
 <p>Find me in app/views/articles/index.html.erb</p>
 
-<%= form_with model: @article do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :body %><br>
-    <%= form.text_field :body %>
-  </div>
-
-  <div>
-    <%= form.label :author %><br>
-    <%= form.text_field :author %>
-  </div>
-
-  <%= form.submit %>
-
-<% end %>
+<%= render 'form', article: @article %>
